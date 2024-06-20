@@ -20,11 +20,12 @@ if 'Context' not in st.session_state:
 	'Faculty_Advisor': '[Faculty Advisor]',
 	'Org_Advisor' : '[Organization Advisor]',
     'Org_Name' : '[Organization Name]',
-    'Date' : '[xx Month 20xx]',
+    'Date' : 'July 2024',
     'Student_Name' : "[Student Name]",
     'Student_Number' : '[Student Number]',
     'Year' : report_year_ug,
-    'Program' : '[Program]'}
+    'Program' : '[Program]',
+	'Student' : 'undergraduate'}
 
 st.markdown("Enter your information here for the SIP Report Template:")
 
@@ -38,7 +39,7 @@ st.session_state['Context']['Student_Number'] = st.text_input(Student_Number['Qu
 
 st.session_state['Context']['Program'] = st.selectbox(Program['Question'], Program['options'], index=None,placeholder=Program['placeholder'])
 
-st.session_state['Context']['Date'] = st.text_input(Date['Question'], key='date',placeholder=Date['placeholder'])
+#st.session_state['Context']['Date'] = st.text_input(Date['Question'], key='date',placeholder=Date['placeholder'])
 
 st.session_state['Context']['Faculty_Advisor'] = st.text_input(Faculty_Advisor['Question'], key='faculty',placeholder=Faculty_Advisor['placeholder'])
 
@@ -55,8 +56,10 @@ if st.button("Submit Form"):
 					# change year based on the program
 					if st.session_state['Context']['Program'] == 'UG':
 						st.session_state['Context']['Year'] = report_year_ug
+						st.session_state['Context']['Student'] = 'undergraduate'
 					if st.session_state['Context']['Program'] == 'PG':
 						st.session_state['Context']['Year'] = report_year_pg
+						st.session_state['Context']['Student'] = 'postgraduate'
 					if st.session_state['Context']['Year']:
 						if st.session_state['Context']['Date']:
 							if st.session_state['Context']['Faculty_Advisor']:
