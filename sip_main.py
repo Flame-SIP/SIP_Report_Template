@@ -68,11 +68,11 @@ if st.button("Submit Form"):
 										doc = render_docx(st.session_state['Context'])
 										bio = io.BytesIO()
 										doc.save(bio)
-										file_name = f'{st.session_state['Context']['Student_Name']}_SIP.docx'
+										file_name = f"{st.session_state['Context']['Student_Name']}_SIP.docx"
 
 										st.download_button(label="Download Template Report",
 											data=bio.getvalue(),
-											file_name='Student_name_SIP.docx',
+											file_name= file_name,
 											mime='docx')
 
 st.markdown("*if you do not get a button to download the template after submitting the form, please check if you have filled information in all the above mentioned fields.")
