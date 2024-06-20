@@ -68,6 +68,7 @@ if st.button("Submit Form"):
 										doc = render_docx(st.session_state['Context'])
 										bio = io.BytesIO()
 										doc.save(bio)
+										file_name = f'{st.session_state['Context']['Student_Name']}_SIP.docx'
 
 										st.download_button(label="Download Template Report",
 											data=bio.getvalue(),
