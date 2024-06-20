@@ -23,7 +23,7 @@ if 'Context' not in st.session_state:
     'Date' : '[xx Month 20xx]',
     'Student_Name' : "[Student Name]",
     'Student_Number' : '[Student Number]',
-    'Year' : report_year,
+    'Year' : report_year_ug,
     'Program' : '[Program]'}
 
 st.markdown("Enter your information here for the SIP Report Template:")
@@ -52,6 +52,11 @@ if st.button("Submit Form"):
 		if st.session_state['Context']['Student_Name']:
 			if st.session_state['Context']['Student_Number']:
 				if st.session_state['Context']['Program']:
+					# change year based on the program
+					if st.session_state['Context']['Program'] == 'UG':
+						st.session_state['Context']['Year'] = report_year_ug
+					if st.session_state['Context']['Program'] == 'PG':
+						st.session_state['Context']['Year'] = report_year_pg
 					if st.session_state['Context']['Year']:
 						if st.session_state['Context']['Date']:
 							if st.session_state['Context']['Faculty_Advisor']:
