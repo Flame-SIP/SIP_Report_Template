@@ -28,7 +28,7 @@ Date = {'Question': 'What is the date today?',
 'placeholder': 'eg: 29 May 2024'}
 
 # contains the question and placeholder text for the name of faculty advisor
-Faculty_Advisor = {'Question': 'Full name of Faculty Advisor',
+Faculty_Advisor = {'Question': 'Full name of Faculty Advisor. Add the appropriate honorific (Prof. or Professor) in front of their name.',
 'placeholder': 'eg: Prof. Viraj Shah'}
 
 # contains the question and placeholder text for the name of organization advisor
