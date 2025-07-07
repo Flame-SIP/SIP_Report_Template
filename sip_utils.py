@@ -3,8 +3,8 @@
 report_dict = {'SIP Report':'SIP Sample report.docx'}
 
 # year to be mentioned on report
-report_year_ug = '2022-2025'
-report_year_pg = '2023-2025'
+report_year_ug = '2023-2026'
+report_year_pg = '2024-2026'
 
 # contains the question and placeholder text for title of the report
 Title_of_Report = {'Question': 'What is the Title of your report?',
