@@ -1,4 +1,4 @@
-rimport streamlit as st
+import streamlit as st
 from docxtpl import DocxTemplate
 import io
 from sip_utils import *
